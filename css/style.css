@@ -84,3 +84,105 @@ body {
     height: 26px;
     background-color: transparent;
 } */
+
+
+/* Title */
+.title-section {
+    text-align: center;
+    padding-top: 0;
+    /* background-color: rgba(172, 158, 204, 0.45); */
+    background: linear-gradient(to left, rgba(131, 103, 196, 0.541), rgba(187, 180, 205, 0.262), rgba(131, 103, 196, 0.541));
+    backdrop-filter: blur(4px);
+    border: 15px;
+}
+
+.companyName {
+    font-size: 320px;
+    font-weight: bold;
+    font-family: Montserrat;
+    color: hwb(229 5% 71%);
+    text-shadow: 5px 5px hwb(231 53% 7%);
+    line-height: 1.2;
+    position: relative;
+    top: 20px;
+    z-index: 1;
+}
+
+/* Image Section */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    top: -50px;
+}
+.gallery-item {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.3s;
+}
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+.none_border{
+    height: 300px;
+    width: 300px;
+}
+.border_img {
+    height: 300px;
+    width: 300px;
+    border-radius: 30%;
+}
+.squareImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.squareImg:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+
+/* Go to fillInfo.html button */
+.main-button {
+    width: 300px;
+    height: 300px;
+    background-color: hsl(241, 80%, 30%);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.main-button a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.main-button:hover {
+    background-color: hsl(249, 58%, 42%);
+    transform: translateY(-10px) scale(1.02);
+}
+
+
