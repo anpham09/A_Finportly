@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/turned-cover\ image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #120971;
+
+    font-weight: bold;
+    /* padding: 0.5%; */
+    z-index: 1000;
+}
+
+.navBar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 0.001%;
+    padding: 10px 20px;
+    font-size: 19px;
+    /* margin-right: 90px; */
+    /* margin-left: 50px; */
+}
+.navBar a:hover{
+    background-color: hsl(249, 58%, 42%);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.navItem:hover{
+    background-color: hsl(249, 58%, 42%);
+    border-radius: 5px;
+}
+.navBar img{
+    width: 150px;
+    height: 25px;
+}
+/* .header-user {
+    position: relative;
+}
+.header-infor a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+}
+.header-infor {
+    padding: 10px;
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.header-infor {
+    display: block;
+}
+.header-user::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 46px;
+    height: 26px;
+    background-color: transparent;
+} */
