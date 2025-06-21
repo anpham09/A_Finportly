@@ -200,5 +200,23 @@ body {
     text-align: left;
 }
 
+.benefit {
+    flex: 1;
+    padding: 10px 20px 20px;
+    background-color: rgba(172, 158, 204, 0.809);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.benefit h2 {
+    font-size: 24px;
+    color: rgb(39, 5, 94);
+    margin-bottom: 10px;
+}
+.benefit p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+}
+
 
 
