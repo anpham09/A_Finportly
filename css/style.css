@@ -185,4 +185,20 @@ body {
     transform: translateY(-10px) scale(1.02);
 }
 
+/* Benefits section */
+.benefits-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0px 20px 20px;
+    background-color: rgba(172, 158, 204, 0.45);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+
 
