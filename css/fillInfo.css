@@ -1,0 +1,33 @@
+.step{
+    margin-top: 50px;
+}
+#step1 {
+    /* background-color: rgb(181, 181, 248); */
+    background: linear-gradient(to right, rgb(181, 181, 248), rgb(137, 137, 248), rgb(88, 88, 247));
+    /* margin-top: 50px; */
+}
+#step2 {
+    background: linear-gradient(to right, rgb(202, 220, 252), rgb(90, 200, 240), rgb(3, 55, 123));
+    /* margin-top: 50px; */
+}
+#step3 {
+    background: linear-gradient(to right, rgb(181, 248, 244), rgb(77, 144, 140), rgb(3, 115, 123));
+}
+#step4 {
+    background: linear-gradient(to right, rgb(181, 248, 189), rgb(87, 144, 77), rgb(3, 92, 22));
+}
+
+#step5 {
+    background: linear-gradient(to right, rgb(234, 248, 181), rgb(145, 160, 58), rgb(83, 91, 20));
+}
+
+#step6 {
+    background: linear-gradient(to right, rgb(248, 230, 181), rgb(160, 138, 58), rgb(91, 72, 20));
+}
+#step7 {
+    background: linear-gradient(to right, rgb(248, 181, 181), rgb(160, 58, 58), rgb(91, 20, 20));
+}
+
+.hidden {
+    /* display: none; */
+}

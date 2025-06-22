@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Financial Report</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/financialReport.css">
+</head>
+<body>
+    <!--Navigation bar-->
+    <div class="bgImg"></div>
+    <div class="navBar">
+        <img src='../img/main main text.png'>
+        <div class="navItem"><a href="../index.html">Home</a></div>
+        <div class="navItem">|</div>
+        <div class="navItem"><a href="../index.html#mission-section">About</a></div>
+        <div class="navItem">|</div>
+        <div class="navItem"><a href="../html/fillInfo.html">Create Financial Report</a></div>
+        <div class="navItem">|</div>
+        <div class="navItem"><a href="../html/forum.html">Forum</a></div>
+    </div>
+
+    <div class="financialReportBackground">
+        <div class="financialReportContainer">
+            <!-- Title -->
+            <div class="financialReportHeader">
+                <div class='financialReportTitleContainer'>
+                    <div class="companyInformation">
+                        <h1 id="companyName">[Company Name]</h1>
+                        <p id="address">[Address]</p>
+                    </div>
+                    <h1 class="financialReportTitle alignRight">Financial Report</h1>
+                </div>
+    
+                <!-- Date -->
+                <div>
+                    <div class="financialReportDateTitle">
+                        <p><b>Date Created</b></p>
+                        <p><b>Date Issued</b></p>
+                    </div>
+                    <div class="financialReportDateInfo">
+                        <p id="dateCreated">[Date Created Input]</p>
+                        <p id="dateIssued">[Date Issued Input]</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="margin-top: 2px;">
+            <!-- Main -->
+            <div class="financialReportMain">
+                <h2>Financial Report</h2>
+
+                <!-- Revenue -->
+                <p class="financialReportHeading">Revenue</p>
+                
+                <div class="categoryAmount hiddenSample">
+                    <p class="revenueCategory">[Category1]</p>
+                    <p class="alignRight revenueAmount">[Amount1]</p>
+                </div>
+                <!-- Total -->
+                <div class="categoryAmount">
+                    <p>Total Revenue</p>
+                    <p class="alignRight">[Sum of revenue]</p>
+                </div>
+                <hr>
+
+                <!-- Expenses -->
+                <p class="financialReportHeading">Expenses</p>
+                
+                <div class="categoryAmount hiddenSample">
+                    <p class="revenueCategory">[Category1]</p>
+                    <p class="alignRight revenueAmount">[Amount1]</p>
+                </div>
+                <!-- Total -->
+                <div class="categoryAmount">
+                    <p>Total Expenses</p>
+                    <p class="alignRight">[Sum of expenses]</p>
+                </div>
+                <hr>
+
+                <!-- Revenue-Expenses -->
+                <div class="categoryAmount financialReportHeading">
+                    <p>Earnings Before Tax (EBT)</p>
+                    <p class="alignRight"  id="ebtValue">[Total Revenue - Total Expenses]</p>
+                </div>
+                <div class="categoryAmount financialReportHeading">
+                    <p>Net Profit</p>
+                    <p class="alignRight" id="netProfitValue">[EBT - EBT*Tax-Rate]</p>
+                </div>
+            </div>
+            
+
+        </div>
+        <button id="downloadPDF">Download PDF</button>
+        <button id="generateAnother"><a href="./fillInfo.html">Generate another financial report</a></button>
+    </div>
+    
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-section">
+            <img src="../img/finportly.png" alt="Finportly Logo" class="footer-logo">
+            <p style="color: white;">Finportly<br>Established Nov, 2024</p>
+        </div>
+        <div class="footer-section">
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+        </div>
+        <div class="footer-section">
+            <p style="color: white;">Contact us: <a href="mailto:support@finportly.com">support@finportly.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="../js/financialReport.js"></script>
+</body>
+</html>
