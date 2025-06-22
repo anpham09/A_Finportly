@@ -6,6 +6,203 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="navBar">
+        <img src="../img/main main text.png">
+        <div class="navItem"><a href="index.html">Home</a></div>
+        <div class="navItem"><a href="../index.html#mission-section">About</a></div>
+        <div class="navItem"><a href=".../html/fillInfo.html">Create Financial Report</a></div>
+        <div class="navItem"><a href="./html/forum.html">Forum</a></div>
+    </div>
+
+    <div class="container">
+        <form method="post" id="step1" class="step">
+            <h2 class="fillInfoHeading">Step 1: General Information</h2>
+            <label>Company Name<span>*</span>:</label><p class="firstStepRequired">Company Name is required</p>
+            <input type="text" id="companyName" placeholder="Enter company name" class="text-input" name="companyName">
+            <label>Address<span>*</span>:</label><p class="firstStepRequired">Address is required</p>
+            <input type="text" id="address" placeholder="Enter company address" class="text-input" name="address">
+            <div>
+                <label>Date Created<span>*</span>:</label><p class="firstStepRequired">Date Created is required</p>
+                <label id="dateIssuedLabel">Date Issued<span>*</span>:</label><p class="firstStepRequired">Date Issued is required</p><br>
+            </div>
+            <div>
+                <input type="date" id="dateCreated" name="dateCreated">
+                <input type="date" id="dateIssued" name="dateIssued"">
+            </div>
+            
+            <button class="step1-button" type="submit" style="margin-top: 9px;">Next</button>
+        </form>
+        <form action="" class="step hidden" id="step2">
+            <h2 class="fillInfoHeading">Step 2: Revenue</h2>
+            <table class="revenueTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount<span>*</span><p class="secondStepRequiredAmount">Amount is required</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step2Category" contenteditable="true">New Category</td>
+                        <td><input type="number" id="step2Number" placeholder="Amount($)" class="number-input step2Number" name="step2Number"></td>
+                    </tr>
+                </tbody>
+                <br>
+                <button onclick="goToStep(1)" type="button">Previous</button>
+                <button class="add-row" onclick="addRow('revenueTable', 2)" type="button">+ Add Revenue</button>
+                <button type="submit">Next</button>
+        </form>
+        <form id="step3" class="step hidden">
+            <h2 class="fillInfoHeading">Step 3: Cost of Goods Sold</h2>
+            <table id="costOfGoodsSoldTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount<span>*</span><p class="thirdStepRequiredAmount">Amount is required</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="step3Category">New Category</td>
+                        <td><input type="number" placeholder="Amount($)" class="number-input step3Number" name="step3Number"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button onclick="goToStep(2)" type="button">Previous</button>
+            <button class="add-row" onclick="addRow('costOfGoodsSoldTable', 3)" type="button">+ Add Expense</button>
+            <button type="submit" class="next">Next</button>
+        </form>
+
+        <form id="step4" class="step hidden">
+            <h2 class="fillInfoHeading">Step 4: Operating Expenses</h2>
+            <table id="operatingExpensesTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount<span>*</span><p class="fourthStepRequiredAmount">Amount is required</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="step4Category">New Category</td>
+                        <td><input type="number" placeholder="Amount($)" class="number-input step4Number" name="step4Number"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button onclick="goToStep(3)" type="button">Previous</button>
+            <button class="add-row" onclick="addRow('operatingExpensesTable', 4)" type="button">+ Add Expense</button>
+            <button type="submit" class="next">Next</button>
+        </form>
+
+        <form id="step5" class="step hidden">
+            <h2 class="fillInfoHeading">Step 5: General and Administrative Expenses</h2>
+            <table id="adExpensesTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount<span>*</span><p class="fifthStepRequiredAmount">Amount is required</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="step5Category">New Category</td>
+                        <td><input type="number" placeholder="Amount($)" class="number-input step5Number" name="step5Number"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button onclick="goToStep(4)" type="button">Previous</button>
+            <button class="add-row" onclick="addRow('adExpensesTable', 5)" type="button">+ Add Expense</button>
+            <button type="submit" class="next">Next</button>
+        </form>
+
+        <form id="step6" class="step hidden">
+            <h2 class="fillInfoHeading">Step 6: Other Expenses</h2>
+            <table id="otherExpensesTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount<span>*</span><p class="sixthStepRequiredAmount">Amount is required</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="step6Category">New Category</td>
+                        <td><input type="number" placeholder="Amount($)" class="number-input step6Number" name="step6Number"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button onclick="goToStep(5)" type="button">Previous</button>
+            <button class="add-row" onclick="addRow('otherExpensesTable', 6)" type="button">+ Add Expense</button>
+            <button type="submit" class="next">Next</button>
+        </form>
+
+        <!--Step 7: Set tax depend on state-->
+        <form id="step7" class="step hidden">
+            <br><br><h2 class="fillInfoHeading">Step 7: Tax</h2>
+            <label for="state">Choose your state (within the US):</label>
+            <select id="state">
+                <option value="alabama">Alabama</option>
+                <option value="alaska">Alaska</option>
+                <option value="arizona">Arizona</option>
+                <option value="arkansas">Arkansas</option>
+                <option value="california">California</option>
+                <option value="colorado">Colorado</option>
+                <option value="connecticut">Connecticut</option>
+                <option value="delaware">Delaware</option>
+                <option value="florida">Florida</option>
+                <option value="georgia">Georgia</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="idaho">Idaho</option>
+                <option value="illinois">Illinois</option>
+                <option value="indiana">Indiana</option>
+                <option value="iowa">Iowa</option>
+                <option value="kansas">Kansas</option>
+                <option value="kentucky">Kentucky</option>
+                <option value="louisiana">Louisiana</option>
+                <option value="maine">Maine</option>
+                <option value="maryland">Maryland</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="michigan">Michigan</option>
+                <option value="minnesota">Minnesota</option>
+                <option value="mississippi">Mississippi</option>
+                <option value="missouri">Missouri</option>
+                <option value="montana">Montana</option>
+                <option value="nebraska">Nebraska</option>
+                <option value="nevada">Nevada</option>
+                <option value="new-hampshire">New Hampshire</option>
+                <option value="new-jersey">New Jersey</option>
+                <option value="new-mexico">New Mexico</option>
+                <option value="new-york">New York</option>
+                <option value="north-carolina">North Carolina</option>
+                <option value="north-dakota">North Dakota</option>
+                <option value="ohio">Ohio</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="oregon">Oregon</option>
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="rhode-island">Rhode Island</option>
+                <option value="south-carolina">South Carolina</option>
+                <option value="south-dakota">South Dakota</option>
+                <option value="tennessee">Tennessee</option>
+                <option value="texas">Texas</option>
+                <option value="utah">Utah</option>
+                <option value="vermont">Vermont</option>
+                <option value="virginia">Virginia</option>
+                <option value="washington">Washington</option>
+                <option value="west-virginia">West Virginia</option>
+                <option value="wisconsin">Wisconsin</option>
+                <option value="wyoming">Wyoming</option>
+            </select>
+
+
+            <br><br><button onclick="goToStep(6)" type="button">Previous</button>
+            <button type="submit" id="generateReport">Generate Report</button><br><br>
+        </form>
+    </div>
+    
     
 </body>
 </html>

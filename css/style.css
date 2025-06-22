@@ -111,7 +111,8 @@ body {
 /* Image Section */
 .image-gallery {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    /* Lat uncomment line o tren nha */
     align-items: center;
     gap: 0;
     position: relative;
