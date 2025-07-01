@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
 }
 
 body {
@@ -10,9 +9,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    color: white;
+    color: #f0f0f0;
     line-height: 1.6;
 }
+
 
 .navBar {
     display: flex;
@@ -53,71 +53,46 @@ body {
     width: 150px;
     height: 25px;
 }
-/* .header-user {
-    position: relative;
-}
-.header-infor a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 10px;
-}
-.header-infor {
-    padding: 10px;
-    position: absolute;
-    display: none;
-    top: 50px;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.header-infor {
-    display: block;
-}
-.header-user::before {
-    content: "";
-    position: absolute;
-    top: 34px;
-    left: 0;
-    width: 46px;
-    height: 26px;
-    background-color: transparent;
-} */
 
 
-/* Title */
+
 .title-section {
     text-align: center;
-    padding-top: 0;
-    /* background-color: rgba(172, 158, 204, 0.45); */
-    background: linear-gradient(to left, rgba(131, 103, 196, 0.541), rgba(187, 180, 205, 0.262), rgba(131, 103, 196, 0.541));
-    backdrop-filter: blur(4px);
-    border: 15px;
+    padding-top: 0px;
+    background-color: rgba(172, 158, 204, 0.45);
+    backdrop-filter: blur(4px); 
+    border-radius: 15px;
 }
 
 .companyName {
     font-size: 320px;
     font-weight: bold;
-    font-family: Montserrat;
-    color: hwb(229 5% 71%);
+    font-family: Montserrat;    
+    color:   hwb(229 5% 71%) ;
     text-shadow: 5px 5px hwb(231 53% 7%);
     line-height: 1.2;
-    position: relative;
-    top: 20px;
+    position: relative; 
+    top: 20px; 
     z-index: 1;
 }
 
-/* Image Section */
+
 .image-gallery {
     display: flex;
-    /* justify-content: center; */
-    /* Lat uncomment line o tren nha */
+    justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 0px;
     position: relative;
     top: -50px;
+}
+.none_border{
+    height: 300px; 
+    width: 300px;
+}
+.border_img{
+    height: 300px; 
+    width: 300px;
+    border-radius: 30%;
 }
 .gallery-item {
     width: 300px;
@@ -129,42 +104,19 @@ body {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: 0.3s;
+    transition:0.3s;
 }
-.gallery-item:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-.none_border{
-    height: 300px;
-    width: 300px;
-}
-.border_img {
-    height: 300px;
-    width: 300px;
-    border-radius: 30%;
-}
-.squareImg {
-    width: 300px;
-    height: 300px;
-    border-radius: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-.squareImg:hover {
-    transform: translateY(-10px) scale(1.02);
+.gallery-item:hover{
+    transform:translateY(-10px) scale(1.02);
 }
 
-
-/* Go to fillInfo.html button */
 .main-button {
     width: 300px;
     height: 300px;
@@ -175,19 +127,38 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
+
 .main-button a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-}
-.main-button:hover {
-    background-color: hsl(249, 58%, 42%);
-    transform: translateY(-10px) scale(1.02);
+
 }
 
-/* Benefits section */
+.main-button:hover {
+    background-color: hsl(249, 58%, 42%);
+    transform:translateY(-10px) scale(1.02);
+}
+
+.squareImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+}
+.squareImg:hover{
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+
 .benefits-section {
     display: flex;
     justify-content: center;
@@ -195,31 +166,37 @@ body {
     gap: 20px;
     padding: 0px 20px 20px;
     background-color: rgba(172, 158, 204, 0.45);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); 
     border-radius: 15px;
     margin: 0;
     width: 100%;
     text-align: left;
 }
+
+
+
 .benefit {
     flex: 1;
     padding: 10px 20px 20px;
     background-color: rgba(172, 158, 204, 0.809);
+
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .benefit h2 {
     font-size: 24px;
     color: rgb(39, 5, 94);
     margin-bottom: 10px;
 }
+
 .benefit p {
     font-size: 18px;
     color: black;
     line-height: 1.6;
 }
 
-/* Mission Section */
+
 #mission-section {
     text-align: center;
     padding: 150px 160px;
@@ -228,33 +205,39 @@ body {
     width: 100%;
     color: black;
 }
+
+
 #mission-section p {
     font-size: 25px;
     line-height: 1.8;
     color: black;
     background-color: rgba(172, 158, 204, 0.809);
     border-radius: 15px;
-    padding: 50px
+    padding: 50px;
 }
+
 #mission-section strong {
     color: rgb(39, 5, 94);
 }
-#mission-section span {
+#mission-section span{
     color: rgb(39, 5, 94);
 }
 
-/* Professional Opinions */
+
+
 .opinions-section {
     text-align: center;
     padding: 30px 0;
     background-color: rgba(172, 158, 204, 0.45);
     backdrop-filter: blur(4px);
 }
+
 .heading {
     font-weight: bold;
     font-size: 30px;
     color: rgb(39, 5, 94);
 }
+
 .testimonial-gallery {
     display: flex;
     justify-content: center;
@@ -263,6 +246,7 @@ body {
     padding: 20px 0;
     overflow: hidden;
 }
+
 .testimonial {
     width: 500px;
     flex-shrink: 0;
@@ -276,6 +260,7 @@ body {
     opacity: 0.5;
     display: none;
 }
+
 .testimonial.active {
     display: block;
     transform: scale(1);
@@ -375,8 +360,8 @@ body {
 /* About Section */
 #about {
     text-align: center;
-    background-color: rgba(172, 158, 204, 0.45); /* Làm mờ phần nền bằng màu trong suốt */
-    backdrop-filter: blur(4px); /* Thêm hiệu ứng làm mờ */
+    background-color: rgba(172, 158, 204, 0.45);
+    backdrop-filter: blur(4px); 
     color: #f0f0f0;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -448,7 +433,7 @@ footer {
     font-size: 24px;
   }
   /* static */
-  /* .header-user {
+  .header-user {
     position: relative;
   }
   .header-infor a {
@@ -487,7 +472,7 @@ footer {
     width: 46px;
     height: 26px;
     background-color: transparent;
-  } */
+  }
 
 @media (max-width: 430px){
     .navBar a{
@@ -606,8 +591,3 @@ footer {
         font-size: 14px;
     }
 }
-
-
-
-
-

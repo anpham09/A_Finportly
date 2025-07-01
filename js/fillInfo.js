@@ -1,7 +1,3 @@
-
-
-// Enable swipe
-
 goToStep = (step) => {
     document.querySelectorAll('.step').forEach((element) => {
         element.classList.add('hidden');
@@ -14,7 +10,7 @@ addRow = (tableId, step) => {
     const newRow = document.createElement('tr');
 
     newRow.innerHTML = `
-        <td><input type="text" id="step${step}Number" placeholder="New Category" class="number-input step${step}Number" name="step${step}Number"></td>
+        <td contenteditable="true" class="step${step}Category">New Category</td>
         <td><input type="number" placeholder="Amount($)" class="number-input step${step}Number"></td>
     `;
     table.appendChild(newRow);

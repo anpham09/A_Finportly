@@ -1,236 +1,128 @@
-
-.step{
-    margin-top: 50px;
-    padding-bottom: 50px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-decoration: none;
 }
 
-/* Background-color */
-#step1 {
-    /* background-color: rgb(181, 181, 248); */
-    background: linear-gradient(to left, rgb(181, 181, 248), rgb(137, 137, 248), rgb(88, 88, 247), rgb(56, 56, 247), rgb(10, 10, 236), rgb(3, 3, 144));
-    /* margin-top: 50px; */
-}
-#step2 {
-    background: linear-gradient(to left, rgb(202, 220, 252), rgb(90, 200, 240), rgb(3, 55, 123));
-    /* margin-top: 50px; */
-}
-#step3 {
-    background: linear-gradient(to left, rgb(181, 248, 244), rgb(77, 144, 140), rgb(3, 115, 123));
-}
-#step4 {
-    background: linear-gradient(to left, rgb(181, 248, 189), rgb(87, 144, 77), rgb(3, 92, 22));
+
+.container {
+    max-width: 800px;
+    margin: 211px auto;
+    padding: 40px;
+    background: hsl(262, 20%, 78%);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #2c2c5f;
+    width: 1000px;
 }
 
-#step5 {
-    background: linear-gradient(to left, rgb(234, 248, 181), rgb(145, 160, 58), rgb(83, 91, 20));
-}
-
-#step6 {
-    background: linear-gradient(to left, rgb(248, 230, 181), rgb(160, 138, 58), rgb(91, 72, 20));
-}
-#step7 {
-    background: linear-gradient(to left, rgb(248, 181, 181), rgb(160, 58, 58), rgb(91, 20, 20));
-}
 
 .hidden {
-    /* display: none; */
-}
-
-/* Circles */
-.circles {
-    display: flex;
-    justify-content: space-between;
-    width: 25%;
-    margin-left: 37.5%;
-    padding: 3%;
-}
-.dot {
-    width: 18px;
-    height: 18px;
-    background-color: rgb(180, 191, 241);
-    border-radius: 50%;
-    display: inline-block;
-    z-index: 1;
-    border: 1px solid rgb(30, 6, 76);
-}
-.circles_hr {
-    display: block;
-    position: absolute;
-    width: 18%;
-    top: 13.5%;
-    left: 41%;
-
-}
-.circles_hr2 {
-    /* top: 160px;
-    left: 630px;
-    width: 250px; */
-}
-.special {
-    background-color: rgb(41, 188, 112);
+    display: none;
 }
 
 
-/* Content */
-.sub_container {
-    display: flex;
-    justify-content: space-around;
-}
-.fillInfoHeading {
-    font-size: 60px;
-    font-weight: 900;
-    
-    text-align: center;
-    margin-top: 10%;
-
-}
-.fillInfoHeading1 {
-    color: rgb(193, 197, 251);
-}
-
-.right{
-    padding: 50px;
-}
-.date_grid_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px; /* optional spacing */
-}
-
-.required {
-    display: block;
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(156, 12, 12);
-}
-.text-input, .number-input {
-    border: none;
-    
-    padding: 8px 4px;
-    outline: none;
-    background: transparent;
-    transition: border-color 0.3s;
-    width: 400px;
-}
-.text-input1 {
-    border-bottom: 2px solid rgb(3, 16, 201);
-    color: rgb(160, 166, 246);
-}
-
-
-
-.text-input::placeholder, input[type="date"] {
-   
-    font-size: 25px;
+.fillInfoHeading{
     font-weight: bolder;
-}
-.text-input1::placeholder, input[type="date"] {
-    color: rgb(192, 195, 241);
-}
-/* input[type="date"] {
-    font-size: 25px;
-    font-weight: bolder;
-    color: rgb(192, 195, 241);
-} */
-
-
-/* .text-input:focus {
-    border-bottom-color: rgb(3, 104, 118);
-} */
-.text-input1:focus {
-    border-bottom-color: rgb(3, 104, 118);
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-.button {
-    padding: 5px 60px;
-    margin-top: 45px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 7%;
-
+#dateIssuedLabel{
+    margin-left: 200px;
 }
-.button1 {
-    background-color: rgb(192, 195, 241);
-    color: rgb(3, 16, 201);
+#dateIssued{
+    margin-left: 191px;
 }
 
-/* Step 2 */
-.fillInfoHeading2 {
-    color: rgb(191, 209, 243);
-}
-#revenueTable {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
 
-#revenueTable th, #revenueTable td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 18px;
+.firstStepRequired, .secondStepRequiredAmount, .thirdStepRequiredAmount, .fourthStepRequiredAmount, .fifthStepRequiredAmount, .sixthStepRequiredAmount{
+    margin-left: 5px;
+    font-size: small;
+    color:red;
+    display: none;
 }
-
-#revenueTable th span {
+span{
     color: red;
 }
 
-.step2Category {
-    outline: none;
-    font-weight: bold;
-}
 
-/* .secondStepRequiredAmount {
-    font-size: 12px;
-    font-weight: bold;
-    color: rgb(255, 0, 0);
-    margin: 5px 0 0 0;
-} */
 
-.step2Number {
-    border-bottom: 2px solid rgb(27, 91, 181);
-    color: rgb(14, 56, 110);
-    font-size: 24px;
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
 }
 
-.step2Number::placeholder {
-    color: rgb(14, 56, 110);
-    font-weight: bold;
-    font-size: 24px;
+table th, table td {
+    border: 1px solid #120971;
+    padding: 10px;
+    text-align: left;
 }
 
-.step2Number:focus {
-    border-bottom: 2px solid rgb(116, 133, 244);
-
+table th {
+    background-color: #f9f9f9;
 }
 
 
-.button2 {
-    background-color: rgb(178, 206, 254);
-    color: rgb(14, 56, 110);
+
+button {
+    background-color: rgb(153, 94, 241);
+    color: hwb(222 87% 7%);
+    border: solid 0.5px #1e1133;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#step2 .add-row {
-    background-color: transparent;
-    border: 2px solid rgb(14, 56, 110);
-    color: rgb(14, 56, 110);
+button:hover {
+    background-color: hsl(275, 80%, 14%);
 }
 
-#step2 button[type="button"]:not(.add-row) {
-    /* background-color: rgb(255, 255, 255); */
-    color: rgb(3, 55, 123);
+button.add-row {
+    margin-bottom: 15px;
 }
 
-#revenueTable th {
-    color: rgb(14, 56, 110);
-    font-weight: bold;
-    font-size: 24px;
+
+
+.text-input{
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #120971;
+    border-radius: 4px;
+}
+.number-input{
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #120971;
+    border-radius: 4px;
 }
 
-.right2 {
-    padding: 10% 0;
+@media (max-width: 430px){
+    .bgImg{
+        max-width: 430px;
+    }
+    .container{
+        max-width: 410px;
+        margin: 300px 8px;
+    }
+    #dateIssuedLabel{
+        display: inline-block;
+        padding: 0;
+        margin-left: 80px;
+    }
+    #dateIssued{
+        margin-left: 60px;
+    }
+
+
+    .footer-section p{
+        font-size: 14px;
+    }
 }

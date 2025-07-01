@@ -3,93 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fill Information</title>
+    <link rel="stylesheet" href="../css/fillInfo.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/fillInfo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+
     <div class="navBar">
         <img src="../img/main main text.png">
         <div class="navItem"><a href="../index.html">Home</a></div>
         <div class="navItem"><a href="../index.html#mission-section">About</a></div>
-        <div class="navItem"><a href=".../html/fillInfo.html">Create Financial Report</a></div>
-        <div class="navItem"><a href="./html/forum.html">Forum</a></div>
+        <div class="navItem"><a href="../html/fillInfo.html">Create Financial Report</a></div>
+        <div class="navItem"><a href="../html/forum.html">Forum</a></div>
     </div>
 
     <div class="container">
+
         <form id="step1" class="step" method="post">
-            <div class="circles">
-                <span class="dot special"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <h2 class="fillInfoHeading">Step 1: General Information</h2>
+            <label>Company Name<span>*</span>:</label><p class="firstStepRequired">Company Name is required</p>
+            <input type="text" id="companyName" placeholder="Enter company name" class="text-input" name="companyName">
+            <label>Address<span>*</span>:</label><p class="firstStepRequired">Address is required</p>
+            <input type="text" id="address" placeholder="Enter company address" class="text-input" name="address">
+            <div>
+                <label>Date Created<span>*</span>:</label><p class="firstStepRequired">Date Created is required</p>
+                <label id="dateIssuedLabel">Date Issued<span>*</span>:</label><p class="firstStepRequired">Date Issued is required</p><br>
             </div>
-            <hr class="circles_hr">
-            <div class="sub_container">
-                <h2 class="fillInfoHeading fillInfoHeading1">Step 1<br>General Information</h2>
-                <div class="right">
-                    <br><input type="text" id="companyName" placeholder="Enter company name" class="text-input text-input1" name="companyName">
-                    <p class="firstStepRequired required">Company Name is required</p>
-
-                    <br><br>
-                    <br><input type="text" id="address" placeholder="Enter company address" class="text-input text-input1" name="address">
-                    <p class="firstStepRequired required">Address is required</p>
-
-                    <br><br>
-                    <br><input type="date" id="dateCreated" name="dateCreated" class="text-input text-input1">
-                    <p class="firstStepRequired required">Date Created is required</p>
-
-                    <br>
-                    <div class="button_container">
-                        <button class="step1-button button button1" type="submit" style="float: right;">Next</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <!-- <form id="step2" class="step hidden">
-            <div class="circles">
-                <span class="dot"></span>
-                <span class="dot special"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            <hr class="circles_hr">
-
-            <div class="sub_container">
-                <h2 class="fillInfoHeading fillInfoHeading2">Step 2<br> Revenue</h2>
-                <div class="right right2">
-                    <table id="revenueTable" class="table">
-                        <thead>
-                            <tr>
-                                <th>Category<span>*</span><p class="secondStepRequiredAmount required">Category is required</p></th>
-                                <th>Amount<span>*</span><p class="secondStepRequiredAmount required">Amount is required</p></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="text" id="step2Number" placeholder="New Category" class="number-input step2Number" name="step2Number"></td>
-                                <td><input type="number" id="step2Number" placeholder="Amount($)" class="number-input step2Number" name="step2Number"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br>
-                    <button onclick="goToStep(1)" type="button" class="button button2">Previous</button>
-                    <button class="add-row button button 2" onclick="addRow('revenueTable', 2)" type="button">+ Add Revenue</button>
-                    <button type="submit" class="button button2">Next</button>
-                </div>
+            <div>
+                <input type="date" id="dateCreated" name="dateCreated">
+                <input type="date" id="dateIssued" name="dateIssued"">
             </div>
             
-        </form> -->
+            <button class="step1-button" type="submit" style="margin-top: 9px;">Next</button>
+        </form>
 
-        <!-- <form id="step3" class="step hidden">
+
+        <form id="step2" class="step hidden">
+            <h2 class="fillInfoHeading">Step 2: Revenue</h2>
+            <table id="revenueTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount<span>*</span><p class="secondStepRequiredAmount">Amount is required</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="step2Category">New Category</td>
+                        <td><input type="number" id="step2Number" placeholder="Amount($)" class="number-input step2Number" name="step2Number"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button onclick="goToStep(1)" type="button">Previous</button>
+            <button class="add-row" onclick="addRow('revenueTable', 2)" type="button">+ Add Revenue</button>
+            <button type="submit">Next</button>
+        </form>
+
+
+        <form id="step3" class="step hidden">
             <h2 class="fillInfoHeading">Step 3: Cost of Goods Sold</h2>
             <table id="costOfGoodsSoldTable">
                 <thead>
@@ -177,6 +152,7 @@
             <button type="submit" class="next">Next</button>
         </form>
 
+
         <form id="step7" class="step hidden">
             <br><br><h2 class="fillInfoHeading">Step 7: Tax</h2>
             <label for="state">Choose your state (within the US):</label>
@@ -236,9 +212,9 @@
 
             <br><br><button onclick="goToStep(6)" type="button">Previous</button>
             <button type="submit" id="generateReport">Generate Report</button><br><br>
-        </form> -->
+        </form>
     </div>
-    
+
     <footer>
         <div class="footer-section">
             <img src="../img/finportly.png" alt="Finportly Logo" class="footer-logo">
